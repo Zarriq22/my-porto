@@ -1,0 +1,531 @@
+
+<!-- Doctype merupakan penanda dari dokumen HTML -->
+<!DOCTYPE html>
+
+<!-- Tag pembuka html -->
+<html lang="en">
+
+    <!-- Tag head berisi semua informasi meta data, title dan tag yang bersifat tidak tampil secara langsung pada halaman web  -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+        <title>My Portofolio</title>
+        
+        <!-- Gunakan CSS dengan bijak ya, jangan memberi style yang sama pada satu tag dengan 3 cara, internal, external dan inline -->
+        <!-- Internal CSS -->
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Styling Navbar */
+
+            .container {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+            }
+
+            .container .bg {
+                background-color: gray;
+            }
+        
+            marquee {
+                background-color: black;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .navbar {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 12px;
+            }
+            
+            .navbar .logo img{
+                border-radius: 100%;
+            }
+
+            .navbar .logo {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .myName {
+                font-size: 20px;
+                color: blue;
+                font-weight: bold;
+            } 
+
+            .info ul {
+                list-style-type: none;
+                display: flex;
+                gap: 24px
+            }
+
+            .info ul li {
+                padding: 5px;
+                font-weight: bold;
+                font-size: 18px;
+                cursor: pointer 
+            }
+            
+            .info ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .info ul li a:hover {
+                color: darkblue;
+            }
+
+            /* Styling Section 1 */
+            .section-one {
+                position: relative;
+                height: 100vh;
+                background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1650&q=80");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .section-one-value {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .section-one-title {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .section-one-title .name {
+                font-size: 64px;
+                font-weight: bold;
+            }
+
+            /* Styling Section 2 */
+            .section-two {
+                background-color: cadetblue;
+                padding: 24px;
+            }
+            
+            .section-two .section-two-value {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white
+            }
+
+            .section-two .section-two-value div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                flex-direction: column;
+            }
+
+            .section-two .section-two-value span {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .section-two .section-two-value img {
+                border-radius: 24px;
+            }
+
+            /* Styling Section 3 */
+            .section-three {
+                background-color: rgb(141, 240, 243);
+                padding: 24px;
+            }
+            
+            .section-three .section-three-value {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-three .section-three-value .section-three-detail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .section-three .section-three-value span {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .section-three #mySkill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .section-three .card-my-skill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100px;
+                padding: 24px 12px;
+                border: 1px solid rgb(46, 80, 81);
+                border-radius: 8px;
+                gap: 24px;
+                flex-direction: column;
+                background-color: aquamarine;
+                color: black;
+                box-shadow: 1px 2px 2px 1px rgb(142, 142, 142);
+                transition: all 0.5s ease-in-out;
+            }
+
+            .section-three .card-my-skill:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            /* Styling Section 4 */
+            .section-four {
+                background-color: rgb(113, 248, 230);
+                padding: 24px;
+            }
+            
+            .section-four .section-four-value {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                flex-direction: column;
+                text-align: center;
+            }
+            .section-four .section-four-value .section-four-detail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .section-four .section-four-value span {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .section-four #eduBackground {
+                width: 100%;
+            }
+
+            .section-four .eduDetail {
+                height: 100%;
+                width: 100%;
+                border: 1px solid rgb(46, 80, 81);
+                border-radius: 8px;
+                background-color: aquamarine;
+                color: black;
+                box-shadow: 1px 2px 2px 1px rgb(142, 142, 142);
+                transition: all 0.5s ease-in-out;
+                font-size: 20px;
+            }
+
+            .section-four .eduDetail:hover {
+                transform: translateY(-10%);
+                cursor: pointer;
+            }
+
+            /* Styling Button */
+
+            .btn-sapa {
+                border: none;
+                background-color: aqua;
+                padding: 10px 30px;
+                font-size: 24px;
+                font-weight: 500;
+                cursor: pointer;
+                border-radius: 50px;
+                margin-top: 20px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .btn-sapa:hover {
+                transform: scale(1.1);
+            }
+
+            /* Styling Popup */
+            .popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                padding: 24px;
+                background-color: gray;
+                border-radius: 12px;
+            }
+
+            .popup .section-one-value {
+                position: relative;
+                background-color: transparent;
+            }
+
+            .popup .section-one-value .btn-close {
+                border: none;
+                cursor: pointer;
+                padding: 8px 12px;
+                font-weight: bold;
+                border-radius: 6px;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+            }
+        </style>
+
+        <!-- External CSS, jika menggunakan CSS di file yang berbeda -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+
+    <!-- Tag body berisi semua konten yang akan ditampilkan di halaman web -->
+    <body>
+        <!-- Tag pembuka <"nama tag"> - tag penutup </"nama tag"> -->
+        <!-- Ada beberapa Tag yang tidak memiliki Tag Penutup -->
+        <!-- Tanda yang menghimpit kalimat ini merupakan tag komen, artinya ini tidak akan mempengaruhi tampilan -->
+
+        <!-- Tag Heading 1 - Tag Heading 6 -->
+        <!-- Penggunaan sama, memilihi tag pembuka dan tag penutup -->
+        <!-- <h1 id="title" style="font-size: 30px">Kami Kelas WEB</h1> Inline CSS menggunakan atribut style --> 
+
+        <!-- Navbar -->
+        <div id="navbar" class="container">
+            <div class="bg">
+                <!-- Section Navigasi -->
+                <!-- Tag Marquee digunakan untuk membuat teks berjalan -->
+                <!-- <marquee behavior="" direction="">Selamat datang.. Perkenalkan saya Nama, saya merupakan seorang FrontEnd Web</marquee> -->
+
+                <!-- Tag Nav digunakan sebagai Navigasi -->
+                <nav class="navbar">
+        
+                    <!-- Tag Div digunakan sebagai pembungkus konten, container, untuk membuat layout -->
+                    <div class="logo">
+        
+                        <!-- Tag img digunakan untuk menampilkan gambar -->
+                        <img src="images/logo.png" alt="" width="50px" height="50px">
+
+                        <!-- Tag span digunakan untuk menampilkan teks -->
+                        <span class="myName">Nama Saya</span>
+                    </div>
+                    <div class="info">
+        
+                        <!-- Tag ul digunakan sebagai list yang menampilkan icon, berupa . -->
+                        <ul>
+
+                            <!-- Tag li digunakan sebagai list -->
+                            <li>
+
+                                <!-- Tag a digunakan sebagai link -->
+                                <a href="#">Beranda</a>
+                            </li>
+                            <li>
+                                <a href="#section-2">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#section-3">My Skill</a>
+                            </li>
+                            <li>
+                                <a href="#experience">Exprerience</a>
+                            </li>
+                            <li>
+                                <a href="#contact">My Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div id="section-1" class="section-one">
+            <div class="section-one-value">
+                <div class="section-one-title">
+                    <span class="name">Hai, Saya <span style="color: blue">Nama Saya</span></span>
+                    <span class="skill">FrontEnd Web Developer | Backend Developer | SQL Developer</span>
+                    <button onclick="clickSaya()" class="btn-sapa">Sapa Saya</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div id="section-2" class="section-two">
+            <div class="section-two-value">
+                <div style="width: 50%;">
+                    <span>Tentang Saya</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dignissimos sunt, ipsum enim veritatis corrupti velit placeat quaerat doloremque illo consequuntur facilis doloribus nobis aspernatur cum, ullam tempora aperiam deserunt!</p>
+                    <button onclick="clickSaya()" class="btn-sapa">Sapa Saya</button>
+                </div>
+                <div style="width: 50%;">
+                    <img src="images/logo.png" alt="" width="75%" >
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div id="section-3" class="section-three" style="padding: 5% 0;">
+            <div class="section-three-value">
+                <div style="width: 50%;">
+                    <span style="color: black;">Keahlian</span>
+                    <p style="font-style: italic; color: rgb(80, 80, 80);">Berikut merupakan beberapa skills teknologi pemrograman yang saya kuasai untuk mendukung berbagai kebutuhan digital.</p>
+                </div>
+                <div class="section-three-detail">
+                    <div id="mySkill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div id="section-4" class="section-four" style="padding: 5% 0;">
+            <div class="section-four-value">
+                <div style="width: 50%;">
+                    <span style="color: black;">Riwayat Pendidikan</span>
+                    <p style="font-style: italic; color: rgb(80, 80, 80);">Saya telah menyelesaikan jenjang pendidikan sebagai bagian untuk terus belajar dan berkembang.</p>
+                </div>
+                <div class="section-four-detail">
+                    <div id="eduBackground"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Komponen Popup -->
+        <div class="popup" style="display: none;">
+            <div class="section-one-value">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora alias dolorum repudiandae sint vitae repellat tempore excepturi, incidunt aliquam quis. Asperiores illum, dolorem consequatur voluptas animi ex impedit quos consequuntur?</p>
+                <button onclick="tutupPopup()" class="btn-close">X</button>
+            </div>
+        </div>
+
+        <script>
+            /* DOM Selection Query "." menandakan mengambil class dan "#" menandakan mengambil id */
+            const popup = document.querySelector('.popup');
+
+            /* Fungsi saat mengklik tombol Sapa Saya */
+            function clickSaya() {
+                popup.style.display = 'block';
+            }
+
+            /* Fungsisaat mengklik tombol Icon Close */
+            function tutupPopup() {
+                popup.style.display = 'none';
+            }
+
+            // Typedata array tandanya [] , digunakan untuk menyimpan data lebih dari 1
+            // Typedata object tandanya {} , digunakan untuk menyimpan data dengan value dan id unik , dengan data key: value
+            const mySkill = [
+                {
+                    id: 1,
+                    skill: 'HTML',
+                    logo: 'https://img.icons8.com/color/48/html-5--v1.png',
+                },
+                {
+                    id: 2,
+                    skill: 'CSS',
+                    logo: 'https://img.icons8.com/color/48/css3.png'
+                },
+                {
+                    id: 3,
+                    skill: 'Javascript',
+                    logo: 'https://img.icons8.com/color/48/javascript--v1.png'
+                },
+                {
+                    id: 4,
+                    skill: 'Python',
+                    logo: 'https://img.icons8.com/color/48/python.png'
+                }
+            ]
+
+            const mySkillElement = document.getElementById('mySkill')
+
+            // contoh Looping menggunakan for of
+            for (let value of mySkill) {
+                mySkillElement.innerHTML += `
+                    <div class="card-my-skill" key="${value.id}">
+                        <img src="${value.logo}" alt="${value.skill}">
+                        <b>${value.skill}</b>
+                    </div>
+                ` 
+            }
+
+            const myEduBackground = document.getElementById('eduBackground')
+
+            const educationBackground = [
+                {
+                    id: 1,
+                    kode: 'SD',
+                    name: 'Codetch School',
+                    alamat: 'Sukabumi',
+                    kelulusan: 2014,
+                },
+                {
+                    id: 2,
+                    kode: 'SMP',
+                    name: 'Codetch School',
+                    alamat: 'Sukabumi',
+                    kelulusan: 2017,
+                },
+                {
+                    id: 3,
+                    kode: 'SMA',
+                    name: 'Codetch School',
+                    alamat: 'Sukabumi',
+                    kelulusan: 2020,
+                }
+            ]
+
+            educationBackground.map(value => {
+                myEduBackground.innerHTML += `
+                    <div class="eduDetail" key="${value.id}" style="margin-bottom: 24px">
+                        <p>${value.kode} - <b>${value.name}</b> - ${value.kelulusan}</p>
+                    </div>
+                `
+            })
+        </script>
+    </body>
+</html>
